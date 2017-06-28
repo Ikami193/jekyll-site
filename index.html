@@ -1,7 +1,3 @@
----
-# この前後3行がないとJekyllがinclude命令等を実行してくれるので消さないように！
----
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -24,7 +20,15 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 <body>
-{% include header.html %}
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Project Page</a>
+    </div>
+  </div><!-- /.container-fluid -->
+</nav>
+
 <div class="container">
   <h1>Jekyllの使い方</h1>
   <hr>
@@ -66,7 +70,7 @@
     <code>include</code>を使うとHTMLの中に他のHTML部品ファイルを挿入することができます。読み込みたいHTML部品ファイルは <code>_includes</code>フォルダの中に配置することになります。
     このページでは <code>_includes</code>フォルダ内の <code>header.html</code>をbody開始タグ直後で以下のコードでincludeしています。
   </p>
-  <pre>{% raw %}{% include header.html %} {% endraw %}</pre>
+  <pre>{% include header.html %} </pre>
   <p>
     <code>header.html</code>も合わせて確認してみると分かりますが、header.htmlは <code>html</code>タグや <code>body</code> タグのない、通常のHTMLに挿入されることが前提の不完全なHTML部品になっています。
     このように、Jekyllやその他のHTML部品化を行ったWebサイト開発では、単純な1枚もののHTMLページよりは多少複雑な構造となり、Webページの動作確認にJekyllサーバやそれに相当する環境（CGIやPHPサーバ）が必要になります。
@@ -75,6 +79,14 @@
     Jekyllには他にも変数や繰り返しを扱う方法がありますが、この授業では <code>include</code>のみ扱うので他にも興味のある人は <a
       href="http://jekyllrb-ja.github.io/docs/templates/" target="_blank">公式サイトのテンプレートページ</a>等を眺めて見て下さい。
   </p>
+</div>
+<div class="container footer">
+  <hr>
+<ul class="list-inline">
+  <li><a href="/">トップページ</a></li>
+  <li><a href="/blog.html">ブログサンプル</a></li>
+</ul>
+
 </div>
 </body>
 </html>
