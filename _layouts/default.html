@@ -28,14 +28,14 @@
 <div class="container">
   {{ content }}
 </div>
-<div class="container">
+<div class="container" style="color: #2a7ae2">
   {% if page.previous %}
   <div class="pull-left">
     <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
   </div>
   {% endif %}
   {% if page.next %}
-  <div class="pull-right">
+  <div class="pull-right"style="color: #424242">
     <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
   </div>
   {% endif %}
@@ -45,5 +45,6 @@
 </div>
 
 <h1>aaaaaaaaa</h1>
+
 </body>
 </html>
