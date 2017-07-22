@@ -7,8 +7,17 @@ hr {
   border-color: black;
 }
 
-li.search{
-  padding-left: 59%;
+.menubar{
+  list-style: none;
+}
+
+.headtitle{
+  text-align: left;
+  float: left;
+}
+
+.headlist{
+  float: right;
 }
 
 .blog-contents{
@@ -19,7 +28,6 @@ li.search{
   margin: 0 0 20px;
   border-color: #777777;
   background-color: #fdfdfd;
-
 }
 
 .carousel .item {
@@ -41,16 +49,6 @@ li.search{
 .history{
   text-align: center;
   list-style: none;
-}
-
-.kokoku{
-  text-align: center;
-}
-
-img.kokoku1{
-  margin: 10px;
-  height: 50%;
-  width: 50%;
 }
 
 .credit {
