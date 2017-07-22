@@ -1,6 +1,10 @@
+body{
+  background-color: #F5ECCE;
+}
+
 hr {
   border-width: 1px;
-  border-color: orange;
+  border-color: black;
 }
 
 li.search{
@@ -13,7 +17,6 @@ li.search{
   line-height: 200%;
   padding: 70px 120px;
   margin: 0 0 20px;
-  border: 1px solid;
   border-color: #777777;
   background-color: #fdfdfd;
 
@@ -53,4 +56,24 @@ img.kokoku1{
 .credit {
   text-align: center;
   margin: 3px;
+}
+
+.hf{
+  text-align: left;
+  float: left;
+}
+.amount{
+  text-align: left;
+  float: left;
+}
+.thick{
+  text-align: left;
+  float: left;
+}
+.recomm{
+  text-align: left;
+  float: left;
+}
+.star {
+  text-align: right;
 }
