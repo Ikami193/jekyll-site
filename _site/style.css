@@ -3,10 +3,6 @@ hr {
   border-color: orange;
 }
 
-@media screen and (max-width: 640px) {
-  .br-sp { display:none; }
-}
-
 li.search{
   padding-left: 59%;
 }
@@ -18,7 +14,9 @@ li.search{
   padding: 70px 120px;
   margin: 0 0 20px;
   border: 1px solid;
+  border-color: #777777;
   background-color: #fdfdfd;
+
 }
 
 .carousel .item {
@@ -52,7 +50,7 @@ img.kokoku1{
   width: 50%;
 }
 
-.credit{
+.credit {
   text-align: center;
   margin: 3px;
 }

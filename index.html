@@ -9,6 +9,8 @@
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
+  <link rel="stylesheet" href="style.css">
+
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
@@ -20,8 +22,9 @@
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
+
 <body>
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-top visible-xs visible-sm">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -61,7 +64,9 @@
         $('body').css('padding-top',height);
     });
 </script>
-
+<div class="row" style="background-color: #F4A460;">
+  <h3 class="text-left">Webサイト開発と運用の実践&#032;中間課題</h3>
+</div>
 
 <div class="container">
   <div class="row">
@@ -76,21 +81,21 @@
       <!-- Wrapper for slides -->
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <img src="curry_01.png" alt="thum01" class="img-rounded center-block"/>
+          <img src="../kari_01.png" alt="thum01" class="img-rounded center-block"/>
           <div class="carousel-caption">
-            カレーライス
+            仮タイトル
           </div>
         </div>
         <div class="item">
-          <img src="curry_02.png"  alt="thum02" class="img-rounded center-block"/>
+          <img src="../kari_02.png"  alt="thum02" class="img-rounded center-block"/>
           <div class="carousel-caption">
-            カツカレー
+            仮タイトル
           </div>
         </div>
         <div class="item">
-          <img src="curry_03.png"  alt="thum03" class="img-rounded center-block"/>
+          <img src="../kari_03.png"  alt="thum03" class="img-rounded center-block"/>
           <div class="carousel-caption">
-            カレーパン
+            仮タイトル
           </div>
         </div>
       </div>
@@ -107,6 +112,82 @@
     </div>
   </div>
 
+  <div class="row">
+    <hr>
+    <ul class="list-inline" style="list-style: none">
+      <li><a class="text-warning">記事一覧</a></li>
+      <li><a class="text-warning">カレー食レポ</a></li>
+      <li><a class="text-warning">レトルトカレー</a></li>
+      <li><a class="text-warning">サイトマップ</a></li>
+    </ul>
+    <hr>
+  </div>
+
+  <div class="row">
+    <div class="blog-contents col-xs-12 col-sm-12 col-md-9 col-lg-9">
+      <h2>著者おすすめのカレー専門店</h2>
+      <br>
+      <h4><strong>カレーは飲み物</strong></h4>
+      <p>メニューは<strong>黒い肉カレー</strong>と<strong class="text-danger">赤い鶏カレー</strong>
+        の2種類のみ。<br>
+        ライスは料金はすべて同じで500g&#044;300g&#044;200gと選べる。<br>
+        そして更に好きなトッピングを3つ選ぶこともできる。もちろん追加料金はなしだ。<br>
+        トッピングの種類は<br>
+        味玉&#044;らっきょう&#044;福神漬け&#044;ポテトサラダ&#044;スライスアーモンド&#044;<br>
+        パクチー&#044;ツナマヨ&#044;コーンマヨ&#044;バジル&#044;フライドオニオン&#009;と豊富にある<br>
+      </p>
+      <img src="curry.JPG" alt="thum08"  class="img-thumbnail"/>
+      <p>私は味玉&#044;コーンマヨ&#044;フライドオニオンを選んだ。<br>
+        フライドオニオンが特に美味しく、カレーとの相性が抜群であった。</p>
+    </div>
+
+    <div class="blog-contents col-xs-12 col-sm-12 col-md-9 col-lg-9">
+      <h2>カレーは飲み物　「赤い鶏カレー」</h2>
+      <br>
+      <h4><strong>カレーは飲み物</strong></h4>
+      <p>メニューは<strong>黒い肉カレー</strong>と<strong class="text-danger">赤い鶏カレー</strong>
+        の2種類のみ。<br>
+        ライスは料金はすべて同じで500g&#044;300g&#044;200gと選べる。<br>
+        そして更に好きなトッピングを3つ選ぶこともできる。もちろん追加料金はなしだ。<br>
+        トッピングの種類は...
+      </p>
+      <a href="/2016/06/26/first.html">続きを読む</a>
+      <img src="../sh_nomimono.JPG" alt="thum08"  class="img-thumbnail"/>
+    </div>
+
+    <div class="sidebar visible-md visible-lg">
+      <img src="profile_me.jpg" alt="thum09" height="100" width="100" class="img-circle center-block"/>
+      <h3 class="text-center text-muted">井上大輝</h3>
+
+      <hr>
+      <h3 class="text-left"><strong>SNS</strong></h3>
+      <div class="sns">
+        <p><strong>Twitter</strong></p>
+        <img src="unnamed.png" alt="thum04" height="50" width="50"/>
+        <a class="twitter-timeline"
+           href="https://twitter.com/i_d_owo?lang=ja"
+           data-width="300"
+           data-height="300">
+          @i_d_owoによるツイート
+        </a>
+        <p><strong>Facebook</strong></p>
+        <img src="fb_icon_325x325.png" alt="thum05" height="50" width="50"/>
+      </div>
+
+      <br>
+      <hr>
+      <h3 class="text-left"><strong>過去記事</strong></h3>
+      <div class="history">
+        <p>カレーはご飯派？ナン派？</p>
+        <p>人気のレトルトカレーは？</p>
+        <p>「バーモントカレー」の新商品!?</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" style="background-color: #F4A460;">
+    <p class="credit"><strong>&copy;&#032;2017&#032;Daiki&#032;INoue</strong></p>
+  </div>
 
 
 </div>
