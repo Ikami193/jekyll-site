@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta content="width=device-width,initial-scale=1" name=viewport>
   <title>Jekyllの使い方</title>
 
   <!-- Latest compiled and minified CSS -->
@@ -20,72 +21,93 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 <body>
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Project Page</a>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Brand</a>
     </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Action</a></li>
+        <li><a href="#">Another action</a></li>
+        <li><a href="#">Something else here</a></li>
+        <li role="separator" class="divider"></li>
+        <li><a href="#">Separated link</a></li>
+        <li role="separator" class="divider"></li>
+        <li><a href="#">One more separated link</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+<script>
+    $(window).on('load resize', function(){
+        // navbarの高さを取得する
+        var height = $('.navbar').height();
+        // bodyのpaddingにnavbarの高さを設定する
+        $('body').css('padding-top',height);
+    });
+</script>
+
 
 <div class="container">
-  <h1>Jekyllの使い方</h1>
-  <hr>
-  <h2>Jekyll概要</h2>
-  <hr>
-  <p>
-    <a href="https://jekyllrb-ja.github.io/" target="_blank">Jekyll</a>はHTMLやMarkDown等で書いたテキストにテンプレート機能や変数、繰り返しなど、
-    簡単なプログラム処理を追加してWebサイトHTMLを生成することができるツールです。
-    Jekyllでビルドした結果は通常の静的なHTMLファイルになるので、Webサーバを選ばず利用することが可能です。
-  </p>
-  <h2>Jekyllで処理されるファイルとされないファイル</h2>
-  <p>
-    外部ファイルのincludeや変数、繰り返しといったJekyllの機能を使いたいファイルには <a href="http://jekyllrb-ja.github.io/docs/frontmatter/">Front-matter</a> と呼ばれる特別なブロックをファイル先頭に記述する必要があります。
-    <b>Front-matterのないHTMLファイルにJekyllのテンプレートタグ（Liquidタグ）を書いても動作しない</b>ので、注意しましょう。
-  </p>
-  <p>
-    例えば、このファイル（index.html）の先頭には以下のFront-matterが記述されています。
-  </p>
-  <pre>---
-# この前後3行がないとJekyllがinclude命令等を実行してくれるので消さないように！
----</pre>
-  <p>
-    このハイフン3つで囲まれた領域がFront-matterで、<b>必ずファイルの1行目に書く必要があります</b>。
-  </p>
-  <hr>
-  <h2>Jekyllを手元で動かす</h2>
-  <p>
-    Jekyllで処理される前提のHTMLは、そのままブラウザで開いてもJekyllのテンプレートが処理されない状態のままなので正しく表示されません。
-    そこで、手元で動作確認するにはJekyllサーバを起動する必要があります。
-    Jekyllのインストール作業が終わっているなら、WebStormの画面下部（Version Controlの右）にある「Terminal」をクリックして出てくるターミナルで以下のコマンドを実行します。
-  </p>
-  <pre>bundle exec jekyll serve</pre>
-  <p>
-    正しくJekyllがインストールされていれば、流れてくる処理結果の中に <code>Server address: http://127.0.0.1:4000/</code>といった表示があると思います。このURLにアクセスすると、ローカルのJekyllサーバにアクセスすることができ、Jekyllで処理された結果のページをブラウザで確認することができます。
-  </p>
-  <hr>
-  <h2>Jekyllで外部ファイルをincludeする</h2>
-  <p>
-    <code>include</code>を使うとHTMLの中に他のHTML部品ファイルを挿入することができます。読み込みたいHTML部品ファイルは <code>_includes</code>フォルダの中に配置することになります。
-    このページでは <code>_includes</code>フォルダ内の <code>header.html</code>をbody開始タグ直後で以下のコードでincludeしています。
-  </p>
-  <pre>{% include header.html %} </pre>
-  <p>
-    <code>header.html</code>も合わせて確認してみると分かりますが、header.htmlは <code>html</code>タグや <code>body</code> タグのない、通常のHTMLに挿入されることが前提の不完全なHTML部品になっています。
-    このように、Jekyllやその他のHTML部品化を行ったWebサイト開発では、単純な1枚もののHTMLページよりは多少複雑な構造となり、Webページの動作確認にJekyllサーバやそれに相当する環境（CGIやPHPサーバ）が必要になります。
-  </p>
-  <p>
-    Jekyllには他にも変数や繰り返しを扱う方法がありますが、この授業では <code>include</code>のみ扱うので他にも興味のある人は <a
-      href="http://jekyllrb-ja.github.io/docs/templates/" target="_blank">公式サイトのテンプレートページ</a>等を眺めて見て下さい。
-  </p>
-</div>
-<div class="container footer">
-  <hr>
-<ul class="list-inline">
-  <li><a href="/">トップページ</a></li>
-  <li><a href="/blog.html">ブログサンプル</a></li>
-</ul>
+  <div class="row">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img src="curry_01.png" alt="thum01" class="img-rounded center-block"/>
+          <div class="carousel-caption">
+            カレーライス
+          </div>
+        </div>
+        <div class="item">
+          <img src="curry_02.png"  alt="thum02" class="img-rounded center-block"/>
+          <div class="carousel-caption">
+            カツカレー
+          </div>
+        </div>
+        <div class="item">
+          <img src="curry_03.png"  alt="thum03" class="img-rounded center-block"/>
+          <div class="carousel-caption">
+            カレーパン
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+
+
 
 </div>
 </body>

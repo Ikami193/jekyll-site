@@ -1,0 +1,54 @@
+hr {
+  border-width: 1px;
+  border-color: orange;
+}
+
+li.search{
+  padding-left: 59%;
+}
+
+.blog-contents{
+  position: relative;
+  font-size: 14px;
+  line-height: 200%;
+  padding: 70px 120px;
+  margin: 0 0 20px;
+  border: 1px solid;
+  background-color: #fdfdfd;
+}
+
+.carousel .item {
+  height: 100%;
+}
+
+.carousel img {
+  width: 100%;
+}
+
+.sanko{
+  color: #777777;
+}
+
+.sns{
+  text-align: center;
+}
+
+.history{
+  text-align: center;
+  list-style: none;
+}
+
+.kokoku{
+  text-align: center;
+}
+
+img.kokoku1{
+  margin: 10px;
+  height: 50%;
+  width: 50%;
+}
+
+.credit{
+  text-align: center;
+  margin: 3px;
+}
