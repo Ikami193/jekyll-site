@@ -11,17 +11,34 @@ hr {
   list-style: none;
 }
 
-header{
-  display: block;
+header01 img{
+  width: 100vw;
 }
 
-.headtitle{
-  text-align: left;
-  float: left;
+.gray {
+  background-color:#F4A460;
 }
 
-.headlist{
-  text-align: right;
+.gray ul {
+  width:1000px;
+  margin:0 auto;
+}
+
+
+h1 {
+  text-align:center;
+  height:30px;
+  margin:45px auto 55px;
+}
+
+.navi ul {
+  height:60px;
+  text-align:center;
+}
+
+.navi li {
+  display:inline-block;
+  padding:0 10px;
 }
 
 .blog-contents{
@@ -100,4 +117,8 @@ table.type04 td {
   padding: 10px;
   vertical-align: top;
   border-bottom: 1px solid #ccc;
+}
+
+.profile{
+  margin-left: 900px;
 }
