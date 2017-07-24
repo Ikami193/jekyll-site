@@ -3,10 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>よっつめの記事</title>
+  <meta content="width=device-width,initial-scale=1" name=viewport>
+  <title>サイトマップ</title>
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="style.css">
 
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
@@ -19,8 +22,9 @@
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
+
 <body>
-<nav class="navbar navbar-default navbar-fixed-top  visible-xs visible-sm">
+<nav class="navbar navbar-default navbar-fixed-top visible-xs visible-sm">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -64,51 +68,43 @@
 <div class="row" style="background-color: #F4A460;">
   <h3 class="headtitle">カレビュー</h3>
   <ul class="list-inline headlist" style="list-style: none">
-    <li><a class="text-warning"></a></li>
-    <li><a class="text-warning">食べたカレー一覧</a></li>
-    <li><a class="text-warning">サイトマップ</a></li>
+    <li><a href="index.html" class="text-warning">TOP</a></li>
+    <li><a href="curry_list.html" class="text-warning">食べたカレー一覧</a></li>
+    <li><a href="sitemap.html" class="text-warning">サイトマップ</a></li>
   </ul>
-</div>TOP
+</div>
 <div class="container">
-  <link rel="stylesheet" href="../../../style.css">
+  <h2>食べたカレー一覧</h2>
+  <h3>店舗</h3>
+  <table class="type04">
+    <tr>
+      <th scope="row">カレーは飲み物</th>
+      <td><a href="/2016/06/26/first.html">赤い鶏カレー</a></td>
+    </tr>
+    <tr>
+      <th scope="row">松屋</th>
+      <td><a href="/2016/06/27/second.html">ゴロゴロチキンカレー</a></td>
+    </tr>
+  </table>
 
-<div class="container">
-  <div class="row">
-  <h2>グリコ&emsp;「カレー職人・なすとトマトのカレー」</h2>
-  <br>
-  <ul class="list-group">
-    <li class="list-group-item"><div class="hf">辛さ</div> <div class="star">中辛</div></li>
-    <li class="list-group-item"><div class="amount">具の量</div> <div class="star">具は入っていましたが値段相応なのか、小さいです...</div></li>
-    <li class="list-group-item"><div class="thick">ルーのとろみ</div><div class="star">ちょっとサラサラ気味です。</div></li>
-    <li class="list-group-item"><div class="recomm">おすすめ度</div><div class="star">味は悪くなく、コスパがかなりいいモノだと思います。</div></li>
-  </ul>
-  <p>近所のスーパーで買いました。値段は73円とレトルトの中ではかなり安いです。<br>
-  なすは小さいながら入っていて、トマトの味も分かるものでした。<br>
-  カレー職人シリーズは安上がりでしかもレンジで温めOKなので料理するのが面倒な時にパパッと食べられるのがうれしいです。</p>
-
-  <img src="../../../re_nasu02.JPG" alt="thum09"  class="img-thumbnail"/>
-  </div>
+  <h3>レトルトカレー</h3>
+  <table class="type04">
+    <tr>
+      <th scope="row">グリコ</th>
+      <td><a href="/2016/06/28/third.html">カレー職人・ビーフカレー</a></td>
+    </tr>
+    <tr>
+      <th scope="row">グリコ</th>
+      <td><a href="/2016/06/28/forth.html">カレー職人・なすとトマトのカレー</a></td>
+    </tr>
+  </table>
 </div>
 
-</div>
-<div class="container" style="color: #2a7ae2">
-  
-  <div class="pull-left">
-    <a href="/2016/06/27/second.html">← ふたつめの記事</a>
-  </div>
-  
-  
-  <div class="pull-right"style="color: #424242">
-    <a href="/2016/06/28/third.html">みっつめの記事 →</a>
-  </div>
-  
-</div>
-<div class="container footer">
-  <div class="row" style="background-color: #F4A460;">
+<div class="row" style="background-color: #F4A460;">
   <p class="credit"><strong>&copy;&#032;2017&#032;Daiki&#032;INoue</strong></p>
 </div>
 
-</div>
 
 </body>
 </html>
+<!--bundle exec jekyll serve -I-->
