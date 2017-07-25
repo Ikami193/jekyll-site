@@ -15,6 +15,10 @@ header01 img{
   width: 100vw;
 }
 
+p.header_gazo img{
+  width: 100%;
+}
+
 .gray {
   background-color:#F4A460;
 }
