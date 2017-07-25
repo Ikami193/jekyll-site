@@ -45,22 +45,19 @@ h1 {
   padding:0 10px;
 }
 
+@media screen and (max-width:767px){
+
+}
+
+
 .blog-contents{
-  position: relative;
-  font-size: 14px;
-  line-height: 200%;
-  padding: 70px 120px;
   margin: 0 0 20px;
   border-color: #777777;
   background-color: #fdfdfd;
 }
 
-.carousel .item {
-  height: 100%;
-}
-
-.carousel img {
-  width: 100%;
+.img-thumbnail{
+  margin: 0 0 20px;
 }
 
 .sanko{
